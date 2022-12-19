@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  <ion-row class="mt-10 mb-10" *ngIf="user">
+  
+    <ion-col *ngIf="page == 'home'" class="mt-10 m-auto tar" size="3">
+      <ion-text color="primary" class="size-head fs-20">
+        <!-- <ng-container *ngIf="(loggedinUser$ | async) as user"> -->
+        <span> {{user.fullName}} </span>
+        <!-- </ng-container> -->
+      </ion-text>
+    </ion-col>
+  
+    <ion-col class="user tar" size="1">
+      <ion-icon class="user_lg cursor" id="userBtn" name="person-circle-outline">
+      </ion-icon>
+    </ion-col>
+    <ion-col size="1.5">
+      <!-- <ion-button  class="signOut"  >Sign Out</ion-button> -->
+      <ion-label class="cursor user" (click)="signOut()">Sign Out</ion-label>
+    </ion-col>
+  </ion-row>
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <div id="container">
+    <h5>Hello {{user.userName}}</h5>
+    <strong>Welcome to Lorem</strong>
+    <!-- <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
+  </div>
+</ion-content>

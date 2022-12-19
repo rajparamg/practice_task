@@ -1,0 +1,44 @@
+.signForm{
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px;
+    margin: 10% auto;
+}
+.noAccount{
+color: #8D8D8D;
+cursor: pointer;
+}
+.signUp{
+    color: #B87514;
+    cursor: pointer;
+}
+ion-input{
+    margin-top: 10px;
+}
+.signIn{
+    --background:#E48700;
+  text-decoration: none;
+}
+.signTxt{
+    font-size: 56px;
+    cursor: pointer;
+}
+.user, .password{
+    height: 54px;
+}
+.forgot{
+    color: 
+    #AD3113;
+}
+// .google{
+//     color:black;
+// }
+.facebook{
+    color: #18ACFE;
+    font-size: 26px;
+}
+.apple{
+    color:black;
+}

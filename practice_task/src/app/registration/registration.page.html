@@ -1,0 +1,51 @@
+<ion-content>
+  <ion-grid class="registrationForm">
+    <ion-row>
+      <ion-col>
+        <ion-label>Welcome to Lorem</ion-label>
+      </ion-col>
+      <ion-col class="tar">
+        <span class="haveAccount">Have an Account?</span>
+        <ion-label class="signIn" [routerLink]="['/login']">Sign In</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="signUp_txtCol">
+      <ion-label class="signUpTitle">Sign Up</ion-label>
+    </ion-col>
+  </ion-row>
+    <!-- <ion-row>
+    
+    </ion-row> -->
+    <form [formGroup]="registrationForm" (ngSubmit)="registerUser()">
+    <ion-row>
+      <ion-col>
+        <ion-label class="formLabel">Enter your username or email address</ion-label>
+        <ion-input class="userName" #userName type="text" formControlName="userName" placeholder="Username or email address"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>User name</ion-label>
+        <ion-input type="text" class="userFullName" formControlName="userFullName" placeholder="User name"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-label>Contact number</ion-label>
+        <ion-input type="text" class="contactNumber" formControlName="contactNumber" placeholder="Contact number"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Enter your password</ion-label>
+        <ion-input type="password" class="password" (keypress)="onPasswordkeyPress($event)" formControlName="password" placeholder="Password"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button class="btn-color signUp" type="submit" [disabled]="!registrationForm.valid">Sign Up</ion-button>
+      </ion-col>
+    </ion-row>
+    </form>
+  </ion-grid>
+  </ion-content>
+  

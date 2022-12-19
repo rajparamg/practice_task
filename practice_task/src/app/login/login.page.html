@@ -1,0 +1,71 @@
+<ion-content>
+<ion-grid class="signForm" [fixed]="true">
+  <ion-row>
+    <ion-col>
+      <ion-label>Welcome to Lorem</ion-label>
+    </ion-col>
+    <ion-col class="tar">
+      <span class="noAccount">No Account</span>
+      <ion-label class="signUp" [routerLink]="['/registration']">Sign Up</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row><ion-col class="sign_txt">
+    <ion-label class="signTxt">Sign In</ion-label>
+  </ion-col></ion-row>
+  <!-- <ion-row>
+  
+  </ion-row> -->
+  <form [formGroup]="loginForm" (ngSubmit)="signIn()">
+  <ion-row>
+    <ion-col>
+      <ion-label>Enter your username or email address</ion-label>
+      <ion-input autofocus="true" class="user" #userName type="text" formControlName="userName" placeholder="Username or email address"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-label>Enter your password</ion-label>
+      <ion-input type="password" class="password" (keypress)="onPasswordkeyPress($event)" formControlName="password" placeholder="Password"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="tar forgot">
+      <ion-label>Forgot password</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button class="btn-color signIn" type="submit" [disabled]="!loginForm.valid">Sign In</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div>OR</div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button class="btn-color ttn">
+        Sign in with Google
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-icon class="facebook" name="logo-facebook"></ion-icon>
+      <!-- <ion-button class="btn-color">
+        Fb
+      </ion-button> -->
+    </ion-col>
+    <ion-col>
+      <ion-icon class="apple" name="logo-apple"></ion-icon>
+      <!-- <ion-button class="btn-color">
+        Git
+      </ion-button> -->
+    </ion-col>
+  </ion-row>
+  <ion-row></ion-row>
+  
+    
+    
+  </form>
+</ion-grid>
+</ion-content>

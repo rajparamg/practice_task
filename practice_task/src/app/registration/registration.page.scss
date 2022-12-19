@@ -1,0 +1,31 @@
+.registrationForm{
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px;
+    margin: 10% auto;
+}
+.haveAccount{
+color: #8D8D8D;
+cursor: pointer;
+}
+.signIn{
+    color: #B87514;
+    cursor: pointer;
+}
+ion-input{
+    margin-top: 10px;
+}
+.signUp{
+    --background:#E48700;
+  text-decoration: none;
+
+}
+.signUpTitle{
+    font-size: 56px;
+    cursor: pointer;
+}
+.userName,.userFullName, .contactNumber, .password{
+    height: 54px;
+}
