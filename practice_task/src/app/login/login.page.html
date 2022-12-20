@@ -1,11 +1,11 @@
-<ion-content>
-<ion-grid class="signForm" [fixed]="true">
+<ion-content class="">
+<ion-grid class="signInForm" [fixed]="true">
   <ion-row>
     <ion-col>
       <ion-label>Welcome to Lorem</ion-label>
     </ion-col>
     <ion-col class="tar">
-      <span class="noAccount">No Account</span>
+      <span class="noAccount mb-4">No Account</span> <br>
       <ion-label class="signUp" [routerLink]="['/registration']">Sign Up</ion-label>
     </ion-col>
   </ion-row>
@@ -19,7 +19,7 @@
   <ion-row>
     <ion-col>
       <ion-label>Enter your username or email address</ion-label>
-      <ion-input autofocus="true" class="user" #userName type="text" formControlName="userName" placeholder="Username or email address"></ion-input>
+      <ion-input class="user" #userName type="text" formControlName="userName" placeholder="Username or email address"></ion-input>
     </ion-col>
   </ion-row>
   <ion-row>
@@ -29,7 +29,7 @@
     </ion-col>
   </ion-row>
   <ion-row>
-    <ion-col class="tar forgot">
+    <ion-col class="tar forgot cursor">
       <ion-label>Forgot password</ion-label>
     </ion-col>
   </ion-row>
@@ -39,7 +39,7 @@
     </ion-col>
   </ion-row>
   <ion-row>
-    <ion-col>
+    <ion-col class="tac">
       <div>OR</div>
     </ion-col>
   </ion-row>
@@ -50,13 +50,13 @@
       </ion-button>
     </ion-col>
     <ion-col>
-      <ion-icon class="facebook" name="logo-facebook"></ion-icon>
+      <ion-icon class="facebook cursor" name="logo-facebook"></ion-icon>
       <!-- <ion-button class="btn-color">
         Fb
       </ion-button> -->
     </ion-col>
     <ion-col>
-      <ion-icon class="apple" name="logo-apple"></ion-icon>
+      <ion-icon class="apple cursor" name="logo-apple"></ion-icon>
       <!-- <ion-button class="btn-color">
         Git
       </ion-button> -->

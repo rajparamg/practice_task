@@ -1,10 +1,13 @@
-.signForm{
+.signInForm{
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 30px;
     margin: 10% auto;
+}
+.bgCl{
+    --background: #ECBC76;
 }
 .noAccount{
 color: #8D8D8D;
@@ -20,6 +23,9 @@ ion-input{
 .signIn{
     --background:#E48700;
   text-decoration: none;
+    width: 100%;
+    //   width: 70%;
+    text-transform: none;
 }
 .signTxt{
     font-size: 56px;
@@ -27,6 +33,7 @@ ion-input{
 }
 .user, .password{
     height: 54px;
+    // width: 70%;
 }
 .forgot{
     color: 
@@ -41,4 +48,8 @@ ion-input{
 }
 .apple{
     color:black;
+    font-size: 26px;
+}
+.mb-4{
+    margin-bottom: 4px;
 }

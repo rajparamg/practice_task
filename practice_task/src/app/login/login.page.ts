@@ -19,6 +19,9 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+  setEmailValidator(){
+    this.loginForm.get('userName').setValidators(Validators.email);  
+}
   async signIn() {
     console.log(this.loginForm)
     let userName = this.loginForm.value.userName;

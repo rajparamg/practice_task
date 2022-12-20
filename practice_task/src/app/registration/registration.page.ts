@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-registration',
@@ -8,8 +10,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class RegistrationPage implements OnInit {
   public registrationForm: any
-
-  constructor() {
+  handlerMessage = '';
+  roleMessage = '';
+  constructor(private alertController: AlertController,
+    private router:Router) {
     this.registrationForm = new FormGroup({
       userName: new FormControl('', Validators.required),
       userFullName: new FormControl('', Validators.required),
@@ -26,12 +30,38 @@ export class RegistrationPage implements OnInit {
     let userFullName = this.registrationForm.value.userFullName;
     let contactNumber = this.registrationForm.value.contactNumber;
     let password = this.registrationForm.value.password;
-    // setTimeout(() => {
-    //   this.authStore.dispatch(
-    //     AuthActions.getUserActions(),
-    //   );
-    // }, 1000);
-    // this.registrationForm.reset();
+    // this.presentAlert();
+    setTimeout(() => {
+      this.router.navigate(['/login'])
+    this.registrationForm.reset();
+    }, 1000);
+    
+  }
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Your Account as created successfully',
+      buttons: [
+        // {
+        //   text: 'Cancel',
+        //   role: 'cancel',
+        //   handler: () => {
+        //     this.handlerMessage = 'Alert canceled';
+        //   },
+        // },
+        {
+          text: 'OK',
+          // role: 'confirm',
+          handler: () => {
+            this.handlerMessage = 'Alert confirmed';
+          },
+        },
+      ],
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+    this.roleMessage = `Dismissed with role: ${role}`;
   }
 
   signIn(){
